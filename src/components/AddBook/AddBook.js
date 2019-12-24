@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import css from './AddBook.module.css';
 
 class AddBook extends Component {
-  state = { title: '', author: '', year: '', pagesCount: '' };
+  state = { title: '', author: '', pagesCount: '' };
 
   handleSubmit = evt => {
     evt.preventDefault();
@@ -11,7 +11,6 @@ class AddBook extends Component {
     this.setState({
       title: '',
       author: '',
-      year: '',
       pagesCount: '',
     });
   };
@@ -22,7 +21,7 @@ class AddBook extends Component {
   };
 
   render() {
-    const { title, author, year, pagesCount } = this.state;
+    const { title, author, pagesCount } = this.state;
     return (
       <>
         <form className={css.formAddBook} onSubmit={this.handleSubmit}>
@@ -36,7 +35,6 @@ class AddBook extends Component {
               name="title"
               value={title}
               required
-              pattern="([A-Za-zА-Яа-яЁё0-9-іІїЇєЄ ]{3,})"
             />
           </label>
           <div className={css.tablet}>
@@ -49,19 +47,6 @@ class AddBook extends Component {
                 type="text"
                 name="author"
                 value={author}
-              />
-            </label>
-            <label htmlFor="Рік випуску">
-              Рік випуску
-              <input
-                placeholder="..."
-                className={css.year}
-                onChange={this.handleChange}
-                type="number"
-                min="1"
-                max="2019"
-                name="year"
-                value={year}
               />
             </label>
             <label htmlFor="Кількість сторінок">

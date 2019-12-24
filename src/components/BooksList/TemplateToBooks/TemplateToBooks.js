@@ -16,7 +16,6 @@ class TemplateToBooks extends Component {
         <div className={css.wrapHead}>
           <div className={`${css.nameHead} ${css.title}`}>Назва книги</div>
           <div className={`${css.authorHead} ${css.title}`}>Автор</div>
-          <div className={`${css.yearHead} ${css.title}`}>Рік</div>
           <div className={`${css.pageHead} ${css.title}`}>Сторінок</div>
           {isEdit && (
             <div className={`${css.ratingHead} ${css.title}`}>Рейтинг</div>
@@ -33,7 +32,6 @@ class TemplateToBooks extends Component {
               />
               <div className={css.nameBody}>{el.title}</div>
               <div className={css.authorBody}>{el.author}</div>
-              <div className={css.yearBody}>{el.year}</div>
               <div className={css.pageBody}>{el.pagesCount}</div>
 
               {isEdit && (
