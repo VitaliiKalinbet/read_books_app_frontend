@@ -47,6 +47,7 @@ class AddBook extends Component {
                 type="text"
                 name="author"
                 value={author}
+                required
               />
             </label>
             <label htmlFor="Кількість сторінок">
