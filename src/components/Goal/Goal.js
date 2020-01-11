@@ -6,7 +6,9 @@ import styles from './Goal.module.css';
 
 const Goal = ({ books, timeStart, timeEnd, NeedToRead }) => {
   const timeStartFormat = moment(timeStart).format('x');
+  // console.log(time);
   const timeEndFormat = moment(timeEnd).format('x');
+  console.log('timeEndFormat ', timeEndFormat);
   const timeForTrening = timeEndFormat - timeStartFormat;
   const DayNeeds = moment(timeForTrening).format('DD');
 

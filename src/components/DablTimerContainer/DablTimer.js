@@ -7,12 +7,14 @@ import Timer from '../Timer/Timer';
 const DablTimer = ({ timeEnd }) => {
   const endDataTime = moment(timeEnd).format('ll');
 
+  const endOfYear = moment(Date.now()).endOf('year')._d;
+
   return (
     <>
       {endDataTime !== null && (
         <div className={styles.timersWraper}>
           <Timer
-            dateFin="Jan 1, 2020"
+            dateFin={endOfYear}
             nameTimer="До закінчення року залишилось"
             className={styles.timer}
           />

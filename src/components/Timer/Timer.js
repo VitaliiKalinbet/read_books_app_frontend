@@ -91,6 +91,7 @@ export default class Timer extends Component {
 }
 
 Timer.propTypes = {
-  dateFin: PropTypes.string.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  dateFin: PropTypes.any.isRequired,
   nameTimer: PropTypes.string.isRequired,
 };
